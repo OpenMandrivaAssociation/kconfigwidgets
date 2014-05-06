@@ -13,6 +13,7 @@ License: LGPL v2.1
 Group: System/Libraries
 BuildRequires: qmake5
 BuildRequires: cmake
+BuildRequires: cmake(KF5Archive)
 BuildRequires: cmake(KF5Auth)
 BuildRequires: cmake(KF5Codecs)
 BuildRequires: cmake(KF5Config)

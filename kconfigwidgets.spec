@@ -5,7 +5,7 @@
 
 Name: kconfigwidgets
 Version: 4.98.0
-Release: 1
+Release: 2
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
 URL: http://kde.org/
@@ -44,6 +44,13 @@ Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
 Requires: %{name} = %{EVRD}
+Requires: extra-cmake-modules5
+Requires: cmake(KF5Auth)
+Requires: cmake(KF5Codecs)
+Requires: cmake(KF5Config)
+Requires: cmake(KF5GuiAddons)
+Requires: cmake(KF5I18n)
+Requires: cmake(KF5WidgetsAddons)
 
 %description -n %{devname}
 Development files (Headers etc.) for %{name}.

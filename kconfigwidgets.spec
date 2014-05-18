@@ -4,8 +4,8 @@
 %define debug_package %{nil}
 
 Name: kconfigwidgets
-Version: 4.98.0
-Release: 2
+Version: 4.99.0
+Release: 1
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
 URL: http://kde.org/
@@ -23,6 +23,7 @@ BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: extra-cmake-modules5
+BuildRequires: kauth
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Widgets)
@@ -70,7 +71,7 @@ mv %{buildroot}%{_prefix}/mkspecs %{buildroot}%{_libdir}/qt5
 
 %files
 %{_bindir}/*
-%{_datadir}/%{name}
+%{_datadir}/kf5/%{name}
 %{_mandir}/man1/*
 
 %files -n %{libname}

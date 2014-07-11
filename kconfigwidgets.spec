@@ -4,9 +4,9 @@
 %define debug_package %{nil}
 
 Name: kconfigwidgets
-Version: 4.99.0
-Release: 2
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
 URL: http://kde.org/
 License: LGPL v2.1
@@ -68,8 +68,9 @@ Development files (Headers etc.) for %{name}.
 %makeinstall_std -C build
 mkdir -p %{buildroot}%{_libdir}/qt5
 mv %{buildroot}%{_prefix}/mkspecs %{buildroot}%{_libdir}/qt5
+%find_lang kconfigwidgets5
 
-%files
+%files -f kconfigwidgets5.lang
 %{_bindir}/*
 %{_datadir}/kf5/%{name}
 %{_mandir}/man1/*

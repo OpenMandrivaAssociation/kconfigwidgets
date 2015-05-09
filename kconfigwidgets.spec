@@ -7,14 +7,12 @@
 Name: kconfigwidgets
 Version: 5.10.0
 Release: 1
-Source0: http://ftp5.gwdg.de/pub/linux/kde/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
+Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
 URL: http://kde.org/
 License: LGPL v2.1
 Group: System/Libraries
-BuildRequires: qmake5
-BuildRequires: cmake
-BuildRequires: ninja
+BuildRequires: cmake(ECM)
 BuildRequires: cmake(KF5Archive)
 BuildRequires: cmake(KF5Auth)
 BuildRequires: cmake(KF5Codecs)
@@ -24,7 +22,6 @@ BuildRequires: cmake(KF5GuiAddons)
 BuildRequires: cmake(KF5WidgetsAddons)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5DocTools)
-BuildRequires: extra-cmake-modules5
 BuildRequires: kauth
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5Gui)
@@ -48,7 +45,7 @@ Summary: Development files for %{name}
 Group: Development/C
 Requires: %{libname} = %{EVRD}
 Requires: %{name} = %{EVRD}
-Requires: extra-cmake-modules5
+Requires: cmake(ECM)
 Requires: cmake(KF5Auth)
 Requires: cmake(KF5Codecs)
 Requires: cmake(KF5Config)
@@ -62,14 +59,14 @@ Development files (Headers etc.) for %{name}.
 %prep
 %setup -q
 %apply_patches
-%cmake -G Ninja \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+%cmake_kde5
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
+
 %find_lang kconfigwidgets5
 
 %files -f kconfigwidgets5.lang

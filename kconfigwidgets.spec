@@ -6,7 +6,7 @@
 
 Name: kconfigwidgets
 Version:	5.15.0
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
 URL: http://kde.org/
@@ -36,6 +36,7 @@ KDE Frameworks 5 library for providing configuration frontends.
 %package -n %{libname}
 Summary: KDE Frameworks 5 library for providing configuration frontends
 Group: System/Libraries
+Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
 KDE Frameworks 5 library for providing configuration frontends.

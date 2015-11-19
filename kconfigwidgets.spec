@@ -72,7 +72,6 @@ Development files (Headers etc.) for %{name}.
 
 %files -f kconfigwidgets5.lang
 %{_bindir}/*
-%{_datadir}/kf5/%{name}
 %{_datadir}/locale/*/kf5_entry.desktop
 %{_mandir}/man1/*
 

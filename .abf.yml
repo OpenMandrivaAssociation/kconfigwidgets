@@ -1,4 +1,2 @@
-removed_sources:
-  kconfigwidgets-5.13.0.tar.xz: aa3fa230808f750024b6ec2d2fad1d3cc36e0279
 sources:
-  kconfigwidgets-5.22.0.tar.xz: 3c59e86381e134df782dae41bdede8da29892226
+  kconfigwidgets-5.23.0.tar.xz: 6b79c336b0d51277cb43b21be7c951c8e0498882

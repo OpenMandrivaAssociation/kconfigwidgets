@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kconfigwidgets
-Version:	5.27.0
+Version:	5.28.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
@@ -76,6 +76,7 @@ Development files (Headers etc.) for %{name}.
 %{_mandir}/man1/*
 %optional %lang(ca) %{_mandir}/ca/man1/*
 %optional %lang(de) %{_mandir}/de/man1/*
+%optional %lang(es) %{_mandir}/es/man1/*
 %optional %lang(it) %{_mandir}/it/man1/*
 %optional %lang(nl) %{_mandir}/nl/man1/*
 %optional %lang(pt_BR) %{_mandir}/pt_BR/man1/*

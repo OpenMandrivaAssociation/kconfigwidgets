@@ -38,6 +38,7 @@ BuildRequires: python-qt5-widgets
 BuildRequires: python-kcodecs
 BuildRequires: python-kwidgetsaddons
 BuildRequires: python-kconfig
+BuildRequires: python-kauth
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt5-assistant

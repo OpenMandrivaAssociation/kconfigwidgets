@@ -36,6 +36,7 @@ BuildRequires: python-qt5-core
 BuildRequires: python-qt5-gui
 BuildRequires: python-qt5-widgets
 BuildRequires: python-kcodecs
+BuildRequires: python-kcoreaddons
 BuildRequires: python-kwidgetsaddons
 BuildRequires: python-kconfig
 BuildRequires: python-kauth

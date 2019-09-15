@@ -29,6 +29,7 @@ BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5DBus)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5Xml)
+BuildRequires: cmake(Qt5UiPlugin)
 # For Python bindings
 BuildRequires: cmake(PythonModuleGeneration)
 BuildRequires: pkgconfig(python3)

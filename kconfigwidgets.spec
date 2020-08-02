@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Name: kconfigwidgets
-Version:	5.72.0
+Version:	5.73.0
 Release:	1
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: KDE Frameworks 5 library for providing configuration frontends
@@ -120,7 +120,7 @@ rm -rf %{buildroot}%{_libdir}/python2*
 %{_bindir}/*
 %{_datadir}/locale/*/kf5_entry.desktop
 %{_mandir}/man1/*
-%{_datadir}/qlogging-categories5/kconfigwidgets.categories
+%{_datadir}/qlogging-categories5/kconfigwidgets.*categories
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
